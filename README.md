@@ -1,2 +1,328 @@
 # Syntecxhub_Landing_Page
 I created a Landing page of Beauty products using HTML, CSS 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aura Beauty</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+    body{
+      background:#fffafc;
+      color:#333;
+    }
+    /* HEADER */
+    header{
+      background:#ff4f81;
+      padding:15px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+    }
+    .logo{
+      color:white;
+      font-size:30px;
+      font-weight:bold;
+    }
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      font-size:16px;
+      transition:0.3s;
+    }
+    nav a:hover{
+      color:#ffe4ec;
+    }
+    /* HERO SECTION */
+    .hero{
+      min-height:90vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:50px 8%;
+      background:linear-gradient(to right,#ffe4ec,#fff);
+    }
+    .hero-text{
+      width:50%;
+    }
+    .hero-text h1{
+      font-size:60px;
+      color:#ff4f81;
+      margin-bottom:20px;
+    }
+    .hero-text p{
+      font-size:18px;
+      line-height:1.8;
+      margin-bottom:30px;
+    }
+    .hero-btn{
+      display:inline-block;
+      padding:15px 35px;
+      background:#ff4f81;
+      color:white;
+      text-decoration:none;
+      border-radius:30px;
+      transition:0.3s;
+      font-weight:bold;
+    }
+    .hero-btn:hover{
+      background:#e63b6f;
+    }
+    .hero img{
+      width:420px;
+      border-radius:20px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    }
+    /* PRODUCTS */
+    .products{
+      padding:80px 8%;
+      text-align:center;
+    }
+    .products h2{
+      font-size:42px;
+      color:#ff4f81;
+      margin-bottom:50px;
+    }
+    .product-container{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:30px;
+    }
+    .card{
+      width:260px;
+      background:white;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+    .card:hover{
+      transform:translateY(-10px);
+    }
+    .card img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+    }
+    .card-content{
+      padding:20px;
+    }
+    .card-content h3{
+      color:#ff4f81;
+      margin-bottom:10px;
+    }
+    .card-content p{
+      font-size:15px;
+      margin-bottom:15px;
+    }
+    .buy-btn{
+      display:inline-block;
+      padding:10px 25px;
+      background:#ff4f81;
+      color:white;
+      text-decoration:none;
+      border-radius:25px;
+      transition:0.3s;
+    }
+    .buy-btn:hover{
+      background:#e63b6f;
+    }
+    /* CTA SECTION */
+    .cta{
+      background:#ff4f81;
+      color:white;
+      text-align:center;
+      padding:80px 20px;
+    }
+    .cta h2{
+      font-size:45px;
+      margin-bottom:20px;
+    }
+    .cta p{
+      font-size:18px;
+      margin-bottom:30px;
+    }
+    .cta-btn{
+      display:inline-block;
+      padding:15px 35px;
+      background:white;
+      color:#ff4f81;
+      text-decoration:none;
+      border-radius:30px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+    .cta-btn:hover{
+      background:#ffe4ec;
+    }
+    /* FOOTER */
+    .footer{
+      padding:1.5rem 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:.9rem;
+      background:transparent;
+      margin-top:2rem;
+    }
+.footer1{
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 40px;
+  background:#f6d2e5bc;
+  border-top: 1px solid #ddd;
+}
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+.footer-box h3{
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #000;
+}
+.footer-box a:hover{
+  color: #325599;
+  padding-left: 5px;
+}
+   .footer2{
+      background:#605f5f;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .hero{
+        flex-direction:column;
+        text-align:center;
+      }
+      .hero-text{
+        width:100%;
+      }
+      .hero img{
+        width:300px;
+        margin-top:40px;
+      }
+      nav{
+        display:none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Aura Beauty</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Discover Your Perfect Beauty Glow</h1>
+      <p>
+        Premium skincare and makeup products designed
+        to make you feel confident, beautiful, and radiant every day.
+      </p>
+      <a href="#" class="hero-btn">Shop Now</a>
+    </div>
+    <img src="Beauty products.jpg"
+         alt="Beauty Products">
+  </section>
+  <!-- PRODUCTS SECTION -->
+  <section class="products">
+    <h2>Featured Products</h2>
+    <div class="product-container">
+      <!-- CARD 1 -->
+      <div class="card">
+        <img src="Lipstick.jpg" alt="Lipstick">
+        <div class="card-content">
+          <h3>Luxury Lipstick</h3>
+          <p>Long-lasting matte lipstick with smooth finish.</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+      <!-- CARD 2 -->
+      <div class="card">
+        <img src="serum.jpg" alt="Serum">
+        <div class="card-content">
+          <h3>Glow Serum</h3>
+          <p> Hydrating serum for naturally glowing skin.</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+      <!-- CARD 3 -->
+      <div class="card">
+        <img src="Skincare.jpg" alt="Skin Care">
+        <div class="card-content">
+          <h3>Skin Care Set</h3>
+          <p> Complete skincare essentials for healthy skin. </p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+      <!-- CARD 4 -->
+      <div class="card">
+        <img src="Haircare.jpg" alt="Hair Care">
+        <div class="card-content">
+          <h3>Hair Care Set</h3>
+          <p> Haircare essentials for Hair growth and keeps healthy.</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CALL TO ACTION -->
+  <section class="cta">
+    <h2>Ready To Shine?</h2>
+    <p>Explore our latest beauty collection and enjoy exclusive offers today.</p>
+    <a href="#" class="cta-btn">Start Shopping</a>
+  </section>
+  <!-- FOOTER -->
+   <footer class="footer1">
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+      </div>
+      <div class="footer-box">
+      <h3>Extra Links</h3>
+      <a href="#">My Account</a>
+      <a href="#products">My Order</a>
+      <a href="#popular">My Favourite</a>
+      </div>
+      <div class="footer-box">
+      <h3> Locations</h3>
+      <a href="#">Hyderabad</a>
+      <a href="#"> Mumbai</a>
+      <a href="#">Bengulore </a>
+      <a href="#">Chennai</a>
+      </div>
+      <div class="footer-box">
+      <h3>Contact-form</h3>
+      <a href="#">+91-95738xxxxx </a>
+      <a href="#">Khushi@gmail.com</a>
+      <a href="#">Hyderabad, India.</a>
+      </div>
+  </footer>
+  <footer class = footer2>
+    <p>© 2026 Aura Beauty | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
